@@ -1,0 +1,39 @@
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 20px;
+  position: relative;
+  margin-top: -60px; /* Pull rows up into the banner fade */
+  z-index: 2; /* Keep it above banner fade */
+}
+
+/* Netflix-style background */
+.rows {
+  background-color: #141414; /* Dark Netflix background */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .rows {
+    gap: 30px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rows {
+    margin-top: -40px;
+    gap: 25px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rows {
+    margin-top: -20px;
+    gap: 15px;
+    padding: 0 5px;
+  }
+}

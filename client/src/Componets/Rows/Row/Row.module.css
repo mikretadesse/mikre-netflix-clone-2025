@@ -1,0 +1,91 @@
+.row_container {
+  position: relative;
+  color: white;
+  margin: 20px 0;
+}
+
+.row_title {
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+
+.row_posters {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding: 20px;
+  gap: 10px;
+}
+
+.row_posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row_poster {
+  max-height: 150px;
+  object-fit: contain;
+  border-radius: 4px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.row_poster_large {
+  max-height: 250px;
+}
+
+.row_poster:hover {
+  transform: scale(1.08);
+  z-index: 10;
+}
+
+.poster_wrapper {
+  position: relative;
+}
+
+.poster_overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  opacity: 0;
+  color: #fff;
+  transition: opacity 0.3s;
+}
+
+.poster_wrapper:hover .poster_overlay {
+  opacity: 1;
+}
+
+.scroll {
+  position: absolute;
+  top: 40%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  padding: 0 10px;
+  border-radius: 3px;
+}
+
+.scroll_left {
+  left: 0;
+}
+
+.scroll_right {
+  right: 0;
+}
+
+.row_trailer {
+  margin: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.row_skeleton {
+  padding: 50px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}
