@@ -1,64 +1,79 @@
-# Netflix Clone – Responsive React App
+# Netflix Clone
 
-A modern **Netflix-inspired UI** built with **React**, **CSS Modules**, and **Vite**, featuring a responsive header, footer, profile dropdown, and smooth mobile navigation. Perfect for practicing responsive design, interactive components, and React fundamentals.
+[![React](https://img.shields.io/badge/React-17.0.2-blue)](https://reactjs.org/)
+[![TMDB API](https://img.shields.io/badge/TMDB-API-green)](https://www.themoviedb.org/documentation/api)
 
----
-
-## **Features**
-
-- Fully **responsive header and footer** that adapts to desktop and mobile.
-- **Profile dropdown** with account options.
-- **Smooth mobile navigation** with hamburger menu and slide-down animation.
-- **Search and notifications icons** (desktop only, just like Netflix).
-- Built with **React functional components** and **CSS Modules** for scoped styling.
-- Mobile-first design approach.
+A **Netflix-inspired clone** built with React, featuring browsing, search, user profiles, and responsive design.
 
 ---
 
-## **Tech Stack**
+## Table of Contents
 
-- **Frontend:** React, CSS Modules  
-- **Bundler:** Vite  
-- **Icons:** Material-UI (MUI) Icons  
-- **Version Control:** Git & GitHub  
+- [Demo](#demo)
+- [Features](#features)
+- [Pages](#pages)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Folder Structure](#folder-structure)
+- [Future Improvements](#future-improvements)
+- [License](#license)
 
 ---
 
-## **Installation & Setup**
+## Demo
 
-1. Clone the repository:
+> my project demo screenshots here
 
-```bash
+![Home Page Screenshot](./screenshots/home.png)  
+![Browse by Languages Screenshot](./screenshots/browse-languages.png)  
+![Search Screenshot](./screenshots/search.png)
+
+---
+
+## Features
+
+- Browse trending movies and shows
+- Filter by genre (Action, Comedy, Horror, Romance, Documentaries)
+- Search for movies and TV shows
+- User profiles with avatar and name
+- Responsive design (mobile and desktop)
+- Header changes from transparent to black on scroll
+- Profile dropdown with Account, Help Center, and Sign Out links
+- My List page to manage favorite content
+
+---
+
+## Pages
+
+- **Home** – Displays featured movies and shows
+- **TV Shows** – Lists popular TV series
+- **Movies** – Lists movies by genres
+- **Latest** – Shows trending content
+- **My List** – User-specific favorite movies/shows
+- **Browse by Languages** – Filter content by language
+- **Search** – Search page for movies/shows
+- **Account** – Manage profiles and settings
+- **Help Center** – Demo support page
+- **Sign Out** – Logout page
+
+---
+
+## Technologies
+
+- **React** – Frontend library
+- **React Router DOM** – Routing
+- **Axios** – API calls
+- **TMDB API** – Movie data
+- **CSS Modules** – Component-level styling
+- **Material UI Icons** – Icons for UI
+
+---
+
+## Setup
+
+1. **Clone the repository:**
+
+````bash
 git clone https://github.com/mikretadesse/Netflix-Clone.git
-cd Netflix-Clone/client
+cd Netflix-Clone
 
-2. Install dependencies:
-
-```bash
-npm install
-
-3. Run the development server:
-
-```bash
-npm run dev
----
-## **Project Structure**
-
-Netflix-Clone/
-├── client/
-│   ├── src/
-│   │   ├── Componets/
-│   │   │   ├── Header/
-│   │   │   │   ├── Header.jsx
-│   │   │   │   └── Header.module.css
-│   │   │   └── Footer/
-│   │   │       ├── Footer.jsx
-│   │   │       └── Footer.module.css
-│   │   ├── Pages/
-│   │   │   └── Home/
-│   │   │       └── Home.jsx
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   └── package.json
-├── .gitignore
-└── README.md
