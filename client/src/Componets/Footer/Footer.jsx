@@ -78,18 +78,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Language Selector */}
-      <div className={Styles.language_wrapper}>
-        <span className={Styles.globe_icon}>🌐</span>
-
-        <select className={Styles.language_select}>
-          <option value="en">English</option>
-          <option value="am">Amharic</option>
-          <option value="fr">French</option>
-          <option value="es">Spanish</option>
-        </select>
-      </div>
-
       {/* Service Button */}
       <div className="text-center mt-4">
         <button className={Styles.service_code}>Service Code</button>

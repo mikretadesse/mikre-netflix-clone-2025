@@ -1,0 +1,104 @@
+.page {
+  min-height: 50vh;
+  background-color: #141414;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.profilesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.profileCard, .addCard {
+  background-color: #1e1e1e;
+  width: 180px;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.profileCard:hover, .addCard:hover {
+  transform: scale(1.05);
+  background-color: #2a2a2a;
+}
+
+.profileCard img {
+  width: 70px;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+.profileCard p {
+  margin: 5px 0;
+}
+
+.profileCard button {
+  background-color: #a5a73e;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.3s;
+}
+
+.profileCard button:hover {
+  background-color: #f6121d;
+}
+
+.addCard p {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.addForm {
+  margin-top: 20px;
+}
+
+.addForm input {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  margin-right: 10px;
+  width: 200px;
+}
+
+.addForm button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.addForm button:first-child {
+  background-color: #e50914;
+  color: #fff;
+}
+
+.addForm button:first-child:hover {
+  background-color: #f6121d;
+}
+
+.addForm button:last-child {
+  background-color: #444;
+  color: #fff;
+}
+
+.addForm button:last-child:hover {
+  background-color: #666;
+}

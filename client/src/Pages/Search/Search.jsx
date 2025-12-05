@@ -17,7 +17,7 @@ const Search = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await instance.get(requests.fetchsearchMovies(query));
+        const res = await instance.get(requests.fetchSearchMovies(query));
 
         // Filter out movies without poster images
         const filteredResults = res.data.results.filter(

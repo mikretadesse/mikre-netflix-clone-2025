@@ -8,6 +8,9 @@ import Movies from "./Pages/Movies/Movies";
 import Latest from "./Pages/Latest/Latest";
 import MyList from "./Pages/MyList/MyList";
 import BrowseLanguages from "./Pages/BrowseLanguages/BrowseLanguages";
+import Account from "./Pages/Account/Account";
+import HelpCenter from "./Pages/HelpCenter/HelpCenter";
+import SignOut from "./Pages/SignOut/SignOut"
 import NotFound from "./Pages/NotFound/NotFound"; // optional 404 page
 import "@fontsource/bebas-neue";
 import "./App.css";
@@ -23,6 +26,9 @@ function App() {
         <Route path="latest" element={<Latest />} />
         <Route path="my-list" element={<MyList />} />
         <Route path="browse-languages" element={<BrowseLanguages />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/help-center" element={<HelpCenter />} />
+        <Route path="/sign-out" element={<SignOut/>} />
         <Route path="*" element={<NotFound />} /> {/* 404 page */}
       </Route>
     </Routes>
