@@ -34,7 +34,7 @@ const Search = () => {
   }, [query]);
 
   return (
-    <div className={styles.searchPage}>
+    <div className={styles.search}>
       <h2 className={styles.heading}>
         Search Results for: <span className={styles.query}>"{query}"</span>
       </h2>

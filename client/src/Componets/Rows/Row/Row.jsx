@@ -1,16 +1,17 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from "../../../utils/axios";
 import movieTrailer from "movie-trailer";
-import YouTube from "react-youtube";
 import styles from "./Row.module.css";
 import { IMAGE_BASE_URL } from "../../../utils/requests";
+import MovieModal from "../../MovieModal/MovieModal";
 
 function Row({ title, fetchUrl, isLargeRow = false }) {
   const [movies, setMovies] = useState([]);
-  const [trailerUrl, setTrailerUrl] = useState("");
   const [loading, setLoading] = useState(true);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [modalMovie, setModalMovie] = useState(null);
+  const [trailerId, setTrailerId] = useState("");
 
   const rowRef = useRef(null);
 
@@ -34,7 +35,6 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
     if (current) {
       const scrollAmount = direction === "left" ? -500 : 500;
       current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-      // Update scroll button states
       setTimeout(() => checkScroll(current), 200);
     }
   };
@@ -46,27 +46,19 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
     );
   };
 
-  // Trailer handling
-  const handleClick = (movie) => {
-    if (trailerUrl) {
-      setTrailerUrl(""); // Close if already open
-    } else {
-      movieTrailer(movie?.name || movie?.title || movie?.original_name || "", {
-        id: true,
-      })
-        .then((id) => {
-          if (id) setTrailerUrl(id);
-          else console.log("Trailer not found for:", movie?.title);
-        })
-        .catch(() => setTrailerUrl(""));
+  // Handle poster click → open modal
+  const handleClick = async (movie) => {
+    try {
+      const id = await movieTrailer(
+        movie?.title || movie?.name || movie?.original_name || "",
+        { id: true }
+      );
+      setTrailerId(id || "");
+      setModalMovie(movie);
+    } catch (error) {
+      setTrailerId("");
+      setModalMovie(movie);
     }
-  };
-
-  // YouTube options
-  const opts = {
-    height: "390",
-    width: "100%",
-    playerVars: { autoplay: 1 },
   };
 
   return (
@@ -108,7 +100,10 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
                   />
                   <div className={styles.poster_overlay}>
                     <h3>{movie?.name || movie?.title}</h3>
-                    <p>{movie?.overview?.slice(0, 70)}...</p>
+                    <p>
+                      {movie.release_date?.slice(0, 4)}  • ⭐{" "}
+                      {movie.vote_average.toFixed(1)}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -124,10 +119,16 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
         </div>
       )}
 
-      {trailerUrl && (
-        <div className={styles.row_trailer}>
-          <YouTube videoId={trailerUrl} opts={opts} />
-        </div>
+      {/* Modal */}
+      {modalMovie && (
+        <MovieModal
+          movie={modalMovie}
+          trailerId={trailerId}
+          onClose={() => {
+            setModalMovie(null);
+            setTrailerId("");
+          }}
+        />
       )}
     </div>
   );

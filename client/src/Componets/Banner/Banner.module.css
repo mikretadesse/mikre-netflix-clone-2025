@@ -1,14 +1,14 @@
 /* =========== Banner Container ============= */
 .banner {
-  position: relative; /* Allows absolute positioning for fade overlay */
+  position: relative; 
   color: #fff;
-  height: 80vh; /* Responsive height based on viewport */
+  height: 80vh; 
   min-height: 300px;
   background-size: cover;
   background-position: center center; /* Center the image */
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: column; /* Stack content vertically */
+  flex-direction: column; 
   justify-content: flex-end; /* Align content to bottom */
   padding: 3rem 2rem 6rem 2rem;
   box-sizing: border-box;
@@ -17,7 +17,7 @@
 /* ========= Banner Content ============ */
 .banner_contents {
   z-index: 2; /* Above the fade layer */
-  max-width: 90%; /* Prevent content overflow */
+  max-width: 90%; 
   margin-left: 1rem;
 }
 
@@ -30,10 +30,10 @@
   margin: 0;
 }
 
-/* =========== Banner Buttons ============= */
+/* ======== Banner Buttons ========== */
 .banner_buttons {
   display: flex;
-  gap: 1rem; /* Space between buttons */
+  gap: 1rem; 
   margin-top: 1rem;
 }
 
@@ -46,7 +46,7 @@
   border-radius: 0.2vw;
   padding: 0.5rem 2rem;
   background-color: rgba(51, 51, 51, 0.5);
-  transition: all 0.3s ease; /* Smooth hover transition */
+  transition: all 0.3s ease; 
 }
 
 .banner_button:hover,
@@ -55,7 +55,7 @@
   color: #000;
 }
 
-/* =========== Banner Description =========== */
+/* ========= Banner Description ========= */
 .banner_description {
   font-size: clamp(0.9rem, 1.5vw, 1.2rem); /* Responsive font */
   max-width: 42rem;
@@ -66,7 +66,7 @@
   text-overflow: ellipsis;
 }
 
-/* =========== Fade Overlay ============= */
+/* =========== Fade Overlay =========== */
 .banner_fadeBottom {
   position: absolute;
   bottom: 0;  /*Fade from bottom up */

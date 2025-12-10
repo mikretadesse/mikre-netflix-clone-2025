@@ -1,4 +1,4 @@
-/* =================== Footer Base =================== */
+/* ========== Footer Base =========== */
 .footer {
   background-color: #141414;
   color: #757575;
@@ -7,7 +7,7 @@
   font-size: 14px;
 }
 
-/* =============== Social Icons =============== */
+/* ============ Social Icons ============= */
 .social_icons {
   gap: 15px;
   margin-bottom: 25px;
@@ -23,7 +23,7 @@
   color: #fff;
 }
 
-/* =========== Footer Links ============ */
+/* ========== Footer Links ========== */
 .footer_links {
   list-style: none;
   padding: 0;
@@ -75,7 +75,7 @@
   color: #fff;
 }
 
-/* ================== Select ================== */
+/* ============ Select ============== */
 .language_select {
   background: transparent;
   border: none;

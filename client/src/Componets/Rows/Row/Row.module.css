@@ -57,10 +57,16 @@
 }
 
 .poster_overlay h3 {
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   font-weight: 500;
 }
+.poster_overlay p {
+  font-size: 15px;
+  text-align: center;
+  font-weight: 400;
+}
+
 
 .poster_wrapper:hover .poster_overlay {
   opacity: 1;

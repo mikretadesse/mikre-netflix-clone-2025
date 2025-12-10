@@ -1,5 +1,6 @@
-.searchPage {
-  padding: 3rem;
+.search {
+  padding: 2rem;
+  margin-top: 60px;
   background-color: #141414;
   color: #fff;
   min-height: 100vh;

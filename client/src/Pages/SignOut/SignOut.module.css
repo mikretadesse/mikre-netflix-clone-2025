@@ -1,6 +1,7 @@
 
 .signout_page {
   min-height: 50vh;
+  margin-top: 60px;
   background-color: #141414;
   display: flex;
   justify-content: center;

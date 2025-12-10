@@ -25,8 +25,14 @@ A **Netflix-inspired clone** built with React, featuring browsing, search, user 
 > my project demo screenshots here
 
 ![Home Page Screenshot](./screenshots/home.png)  
-![Browse by Languages Screenshot](./screenshots/browse-languages.png)  
+![Movies Screenshot](./screenshots/movies.png)  
+![Latest Screenshot](./screenshots/latest.png)
+![Tv Shows Screenshot](./screenshots/tvshows.png)
+![My List Screenshot](./screenshots/mylist.png)
+![Browse Languages Screenshot](./screenshots/browse_languages.png)
 ![Search Screenshot](./screenshots/search.png)
+![Account Screenshot](./screenshots/Account.png)
+![Help Center Screenshot](./screenshots/help_center.png)
 
 ---
 

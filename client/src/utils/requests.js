@@ -24,4 +24,5 @@ const requests = {
 };
 
 export const IMAGE_BASE_URL = import.meta.env.VITE_TMDB_IMAGE_BASE_URL;
+export const Size_Image = import.meta.env.VITE_TMDB_IMAGE_BASE_URL_SIZE;
 export default requests;

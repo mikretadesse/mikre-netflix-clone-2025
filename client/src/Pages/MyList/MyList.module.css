@@ -1,11 +1,13 @@
 .mylist_page {
-  padding: 5rem;
+  padding: 2rem;
+  margin-top: 60px;
   background-color: #141414;
   min-height: 50vh;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .page_title {
@@ -15,12 +17,19 @@
 
 .login_prompt {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+}
+
+.empty {
+  font-size: 1.5rem;
+  color: #aaa;
 }
 
 .login_btn {
-  background-color: #e50914; /* Netflix red */
+  background-color: #e50914; 
   border: none;
   color: #fff;
   padding: 0.5rem 1.5rem;
