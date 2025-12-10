@@ -81,5 +81,5 @@ A **Netflix-inspired clone** built with React, featuring browsing, search, user 
 
 ````bash
 git clone https://github.com/mikretadesse/Netflix-Clone.git
-cd Netflix-Clone
-<pre> ```plaintext Netflix-Clone/ ├── public/ │ ├── index.html │ └── favicon.ico ├── src/ │ ├── components/ │ │ ├── Header/ │ │ │ ├── Header.jsx │ │ │ └── Header.module.css │ │ ├── Footer/ │ │ └── TrailerModal/ │ │ ├── TrailerModal.jsx │ │ └── TrailerModal.module.css │ ├── pages/ │ │ ├── Home/ │ │ ├── Movies/ │ │ ├── TVShows/ │ │ └── MyList/ │ ├── App.jsx │ └── index.js ├── package.json └── README.md ``` </pre>
+cd netflix-clone
+<
